@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(144, 210, 237);
+    font-family: 'Play', sans-serif;
+}
+
+h1 {
+    color: blue;
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+a {
+    text-decoration: none;
+}

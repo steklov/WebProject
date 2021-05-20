@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Викторина</title>  
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+        <link href="static/style.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <h1>Где {{ question }}?</h1>
+
+        {% for filename, title in items %}
+            <a href="/result?answer={{ filename }}">
+                <img src="static/{{ topic }}/{{ filename }}.jpg" height="150">
+            </a>
+        {% endfor %}
+
+    </body>
+</html>
