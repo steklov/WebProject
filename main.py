@@ -56,7 +56,7 @@ def task():
         get_current_task()
         form_options()
         print(session)
-        return render_template('task.html', topic=session['topic'], items=session['options'], question=session['question'], filename=session['right'])
+        return render_template('task.html', topic=session['topic'], items=session['options'], question=session['right'], filename=session['right'])
     else:
         return render_template("finished.html")
 
@@ -64,13 +64,13 @@ def task():
 @app.route('/result')
 def result():
     right_phrases = (
-        "Правильно!", "Верно!", "Молодец!",
-        "Ответ верный!", "Отлично!", "Великолепно!"
+        "Great!", "Right!", "Yes!",
+        "Excellent!", "You are right!"
         )
 
     wrong_phrases = (
-        "Нет!", "Неверно!", "Ошибка!",
-        "Ответ неверный!", "Ошибаешься!", "Неправильно!"
+        "No!", "It's wrong!", "Mistake!",
+        "You are wrong!", "It's not right!"
         )
 
     answer = request.args.get('answer')
